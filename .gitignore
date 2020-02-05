@@ -1,0 +1,6 @@
+# Ignore NPM Dependencies
+node_modules
+
+# Ignore Compiled files
+scripts
+fonts

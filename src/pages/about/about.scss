@@ -1,0 +1,22 @@
+#home {
+    padding-top: 20px;
+    color: white;
+
+    .content-area {
+        margin-bottom: 100px;
+        .heading {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            border-bottom: 1px solid whitesmoke;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+}
