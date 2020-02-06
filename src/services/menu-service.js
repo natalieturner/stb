@@ -1,5 +1,5 @@
 import { inject } from 'aurelia-framework';
-import { UntappdService } from 'untappd-service';
+import { UntappdService } from 'services/untappd-service';
 
 @inject(UntappdService)
 export class MenuService {
