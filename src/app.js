@@ -1,14 +1,11 @@
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router'
 import {ScrollPageStep} from 'resources/pipelines/scroll-page-step';
-import {DialogService} from 'aurelia-dialog';
 
 @inject(Router)
 export class App {
-    static inject= [ DialogService ];
-    constructor(sessionService, router, dialogService) {
+    constructor(router) {
         this.router = router;
-        this.dialogService = dialogService;
     }
 
     async activate() {
