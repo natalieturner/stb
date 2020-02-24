@@ -1,25 +1,46 @@
 import {inject} from 'aurelia-framework';
 import { MenuService } from 'services/menu-service';
+import { Helpers } from 'resoures/helpers'
 
-@inject(MenuService)
+@inject(MenuService, Helpers)
 
 export class OnTap {
-    beerList;
+    menu
+    beerList
+    tapList
+    menuSections;
+    beersOnTap;
 
-    constructor(menuService) {
+    constructor(menuService, helpers) {
         this.menuService = menuService;
     }
 
     async attached() {
-        this.beerList = await this.menuService.getMenu();
-        console.log('beerlit - ', this.beerList);
+        this.menu = await this.menuService.getMenu();
+        this.beerList = this.menu['menu'];
+        this.menuSections = this.beerList['sections'];
+        this.tapList = this.menuSections[0];
+        console.log('taplist - ', this.tapList);
+        this.beersOnTap = this.tapList['items'];
+        console.log(this.beersOnTap);
     }
 
-    async activate() {
-        //The activate function is going to fire AFTER the page is loaded
-        //Typically this is where you would want to do any routes to bring in the data for a page.
-        //If this data is going to take awhile to load, I would do it in the attached.
-        //Aurelia supports ES6/7 Methods so using async/await is going to be your best friend
-    }
+    async activate() {}
 
+    document.querySelector('.card-text-wrapper').addEventListener('click', function (evt) {
+
+    $('.card-text-wrapper').click(function() {
+        clickToExpandCards($(this));
+    });
+
+    function clickToExapndCards($obj){
+        var clickedElement = $obj;
+        if (clickedElement.hasClass('expanded')) {
+            clickedElement.find('.card-text').hide('slow');
+            clickedElement.removeClass('expanded');
+        } else {
+            clickedElement.find('.card-text').show('slow');
+            clickedElement.addClass('expanded');
+        }
+    };
 }

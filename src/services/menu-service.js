@@ -10,6 +10,6 @@ export class MenuService {
     }
 
     async getMenu() {
-        return await this.untapped.doGet('/menu/' + this.menuId + '?full=true');
+        return await this.untapped.doGet('/menus/' + this.menuId + '?full=true');
     }
 }

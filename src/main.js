@@ -13,7 +13,7 @@ export function configure(aurelia) {
                     .withDefaults(
                         {headers: {
                                 'Content-Type': 'application/json',
-                                'Accept': 'application/json',
+                              //  'Accept': 'application/json',
                                 'Authorization' : 'Basic ' + environment.untappdApiKey,
                             }});
             });

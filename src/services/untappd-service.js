@@ -9,6 +9,7 @@ export class UntappdService {
 
     async doGet(path) {
         console.log('endpoint - ', this.endpoint);
+        console.log(this.endpoint.find(path, null, 'json'));
         return await this.endpoint.find(path, null, 'json');
     }
 }

@@ -1,0 +1,49 @@
+#onTap {
+    padding-top: 20px;
+    color: black;
+    background-image: "assets/STB32.png";
+
+    .card-area {
+        color: orange;
+    }
+
+    .content-area {
+        margin-bottom: 100px;
+
+        .heading {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            border-bottom: 1px solid whitesmoke;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+    .card-wrapper {
+      width: 50%;
+      display:inline-block;
+      height: 100px;
+      background-size:cover;
+      position: relative;
+    }
+    .card-text-wrapper{
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .hide {
+      display: none;
+    }
+    .show {
+      display:block;
+    }
+}

@@ -7,9 +7,14 @@
         .heading {
             font-size: 18px;
             font-weight: bold;
+            font-color: white;
             letter-spacing: 1px;
             border-bottom: 20px solid whitesmoke;
             margin-bottom: 20px solid whitesmoke;
+        }
+
+        .body {
+            font-color: white;
         }
 
         .content-image {
@@ -26,6 +31,7 @@
 
     body {
       font-family: 'Lato', sans-serif;
+      font-color: white;
     }
 
     .overlay {

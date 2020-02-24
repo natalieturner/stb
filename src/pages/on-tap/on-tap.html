@@ -1,14 +1,18 @@
 <template>
     <require from="./on-tap.css"></require>
-    <span id="tapList">
-            <div class="container-fluid">
-            <div class="content-area row">
-                <div class="col-6">
-                    <div class="content-image">
-                        <img src="assets/brewing1.jpg">
+    <div id="onTap" class="container-fluid">
+        <div class="row" repeat.for="beer of beersOnTap">
+            <div class="col-sm-6">
+                <div class="card-wrapper align=center">
+                    <div class="onclick" click.delegate="clickToExpandCards($event)">
+                        <div class="card-text-wrapper">
+                            <h6 class="card-title">${beer.name}</h6>
+                            <h7>${beer.style}</h7>
+                            <p class='card-text hide'>${beer.description}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </span>
+    </div>
 </template>
