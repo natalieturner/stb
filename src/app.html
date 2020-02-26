@@ -3,9 +3,10 @@
     <require from="bootstrap/css/bootstrap.min.css"></require>
     <require from="./styles/styles.css"></require>
 
-    <navigation-bar></navigation-bar>
+    <navigation-bar if.bind="verified"></navigation-bar>
+    <age-verification if.bind="!verified"></age-verification>
 
-    <div class="page-host">
+    <div class="page-host" show.bind="verified">
         <!-- Injected Content -->
         <router-view></router-view>
     </div>

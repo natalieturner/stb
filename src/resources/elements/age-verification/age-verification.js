@@ -15,10 +15,7 @@ export class AgeVerification {
     }
 
     async activate() {
-        this.oldEnough = this.sessionService.getOldEnough();
-        if(this.oldEnough) {
-            this.router.navigate('on-tap');
-        }
+
     }
 
     openNav() {

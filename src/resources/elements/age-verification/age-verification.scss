@@ -1,6 +1,7 @@
 #home {
     padding-top: 20px;
     color: white;
+    background: "assets/salty-dog-wood.jpg";
 
     .content-area {
         margin-bottom: 100px;
@@ -14,8 +15,8 @@
 
         .content-image {
             img {
-                width: 80%;
-                height: 80%;
+                width: 100%;
+                height: 100%;
                 max-width: 100%;
                 max-height: 100%;
                 opacity: 0.6;

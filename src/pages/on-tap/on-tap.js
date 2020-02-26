@@ -1,18 +1,20 @@
 import {inject} from 'aurelia-framework';
+import { DialogController } from 'aurelia-dialog';
+//import { Helpers } from 'helpers.js';
 import { MenuService } from 'services/menu-service';
-import { Helpers } from 'resoures/helpers'
 
-@inject(MenuService, Helpers)
+@inject(MenuService, DialogController)
 
 export class OnTap {
-    menu
-    beerList
-    tapList
+    menu;
+    beerList;
+    tapList;
     menuSections;
     beersOnTap;
 
-    constructor(menuService, helpers) {
+    constructor(menuService, dialogController) {
         this.menuService = menuService;
+        this.dialogController = dialogController;
     }
 
     async attached() {
@@ -25,22 +27,16 @@ export class OnTap {
         console.log(this.beersOnTap);
     }
 
-    async activate() {}
-
-    document.querySelector('.card-text-wrapper').addEventListener('click', function (evt) {
-
-    $('.card-text-wrapper').click(function() {
-        clickToExpandCards($(this));
-    });
-
-    function clickToExapndCards($obj){
-        var clickedElement = $obj;
-        if (clickedElement.hasClass('expanded')) {
-            clickedElement.find('.card-text').hide('slow');
-            clickedElement.removeClass('expanded');
-        } else {
-            clickedElement.find('.card-text').show('slow');
-            clickedElement.addClass('expanded');
-        }
+    clickToExpandCards(beer){
+        beer.isExpanded = !beer.isExpanded;
     };
+
+//     var clickedElement = $obj;
+//     if (clickedElement.hasClass('expanded')) {
+//     clickedElement.find('.card-text').hide('slow');
+//     clickedElement.removeClass('expanded');
+// } else {
+//     clickedElement.find('.card-text').show('slow');
+//     clickedElement.addClass('expanded');
+// }
 }

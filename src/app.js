@@ -1,14 +1,22 @@
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router'
 import {ScrollPageStep} from 'resources/pipelines/scroll-page-step';
+import {SessionService} from "./services/session-service";
+import {EventAggregator} from 'aurelia-event-aggregator';
 
-@inject(Router)
+@inject(Router, SessionService, EventAggregator)
 export class App {
-    constructor(router) {
+    constructor(router, sessionService, eventAggregator) {
         this.router = router;
+        this.sessionService = sessionService;
+        this.eventAggregator = eventAggregator;
     }
 
     async activate() {
+        this.verified = this.sessionService.getOldEnough();
+        this.verifiedSubscriber = this.eventAggregator.subscribe('verified-updated', (payload) => {
+            this.verified = payload.status;
+        });
     }
 
     configureRouter(config, router) {
@@ -18,39 +26,34 @@ export class App {
         config.addPreActivateStep(ScrollPageStep);
         config.map([
             {
-                route: ['', 'age-verification'],
-                name: 'age-verification',
-                moduleId: vRoot + 'age-verification/age-verification',
-                nav: true,
-                title: 'Are you old enough to be here?'
-            },
-            {
-                route: ['home'],
+                route: ['home' , ''],
                 name: 'home',
                 moduleId: vRoot + 'home/home',
-                nav: true,
                 title: 'Home'
             },
             {
                 route: ['on-tap'],
                 name: 'on-tap',
                 moduleId: vRoot + 'on-tap/on-tap',
-                nav: true,
                 title: 'On Tap'
             },
             {
                 route: ['events'],
                 name: 'events',
                 moduleId: vRoot + 'events/events',
-                nav: true,
                 title: 'Events'
             },
             {
                 route: ['about'],
                 name: 'about',
                 moduleId: vRoot + 'about/about',
-                nav: true,
                 title: 'About Us'
+            },
+            {
+                route: ['shop'],
+                name: 'shop',
+                moduleId: vRoot + 'shop/shop',
+                title: 'Shop'
             }
         ]);
 

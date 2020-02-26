@@ -5,6 +5,7 @@ export function configure(config) {
     config.globalResources([
         // Elements
        `${ELEMENTS}/navigation-bar/navigation-bar`,
+       `${ELEMENTS}/age-verification/age-verification`,
 
         // Value Converters
         `${VALUE_CONVERTERS}/full-name`,

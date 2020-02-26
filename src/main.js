@@ -9,6 +9,7 @@ export function configure(aurelia) {
             // Register hosts
             config.registerEndpoint('untappd-api', configure => {
                 configure
+
                     .withBaseUrl(environment.untappdEndpoint)
                     .withDefaults(
                         {headers: {

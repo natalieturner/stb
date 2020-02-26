@@ -1,8 +1,10 @@
 .navbar {
     padding-top: 10px;
     padding-bottom: 10px;
+    position: fixed;
     color: white !important;
-    //ackground-color: black;
+    background-color: black;
+    transition: top 0.3s;
 
     .navbar-brand {
         img {
@@ -24,5 +26,19 @@
         font-size: 1.2142em;
         padding: 0.5rem 0.7rem;
         line-height: 1.625rem;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
     }
 }

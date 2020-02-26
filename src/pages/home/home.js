@@ -1,12 +1,6 @@
 export class Home {
 
-    constructor() {}
-
-    attached() {
-        //The attached function is going to fire BEFORE the page is loaded
-    }
-
-    async activate() {
+    constructor() {
     }
 
     openNav() {
