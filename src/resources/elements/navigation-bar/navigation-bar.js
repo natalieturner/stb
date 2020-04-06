@@ -5,9 +5,6 @@ import {inject} from 'aurelia-framework';
 @inject(SessionService)
 
 export class NavigationBar {
-    attached() {
-
-    }
 
     constructor(sessionService) {
         this.sessionService = sessionService;
@@ -22,5 +19,4 @@ export class NavigationBar {
     }
 
     prevScrollpos = window.pageYOffset;
-
 }

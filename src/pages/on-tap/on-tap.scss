@@ -1,7 +1,9 @@
 #onTap {
-    padding-top: 20px;
-    color: black;
-    background-image: "assets/STB32.png";
+    .onTap {
+        padding-top: 20px;
+        color: black;
+        background-image: "assets/STB32.png";
+    }
 
     .card-area {
         color: orange;

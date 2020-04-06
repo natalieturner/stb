@@ -15,10 +15,11 @@ export class App {
 
     async activate() {
         this.verified = this.sessionService.getOldEnough();
-        this.verifiedSubscriber = this.eventAggregator.subscribe('verified-updated', (payload) => {
+        this.eventAggregator.subscribe('verified-updated', (payload) => {
             this.verified = payload.status;
         });
     }
+
 
     configureRouter(config, router) {
         config.options.pushState = true;

@@ -3,8 +3,8 @@
     <require from="bootstrap/css/bootstrap.min.css"></require>
     <require from="./styles/styles.css"></require>
     <require from="toastr/build/toastr.css"></require>
-    <age-verification if.bind="!verified"></age-verification>
 
+    <age-verification if.bind="!verified"></age-verification>
     <navigation-bar if.bind="verified"></navigation-bar>
 
     <div class="page-host" show.bind="verified">
@@ -13,4 +13,5 @@
     </div>
 
     <footer show.bind="verified"></footer>
+
 </template>

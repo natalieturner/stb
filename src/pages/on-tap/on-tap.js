@@ -32,13 +32,13 @@ export class OnTap {
         beer.isExpanded = !beer.isExpanded;
     };
 
-    toggleOpen(beer) {
+    toggleOpen(beerSelected) {
         for (let beer of this.beersOnTap) {
-            if (beer.opened) {
+            if (beer.opened && beer.abv !== beerSelected.abv) {
                 beer.opened = false;
             }
         }
-        beer.opened = !beer.opened;
+        beerSelected.opened = !beerSelected.opened
     }
 
 //     var clickedElement = $obj;
