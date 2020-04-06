@@ -1,6 +1,5 @@
 import {inject} from 'aurelia-framework';
 import { DialogController } from 'aurelia-dialog';
-//import { Helpers } from 'helpers.js';
 import { MenuService } from 'services/menu-service';
 
 @inject(MenuService, DialogController)
@@ -30,6 +29,11 @@ export class OnTap {
     clickToExpandCards(beer){
         beer.isExpanded = !beer.isExpanded;
     };
+
+    toggleDiv(divId) {
+        $("#"+divId).toggle();
+        $('.toggle').not($("#"+divId)).hide();
+    }
 
 //     var clickedElement = $obj;
 //     if (clickedElement.hasClass('expanded')) {

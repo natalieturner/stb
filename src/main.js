@@ -1,6 +1,7 @@
 import environment from 'environment';
 import 'bootstrap';
 import 'moment';
+import 'aurelia-bootstrap-datetimepicker/dist/amd/bootstrap-datetimepicker-bs4.css';
 
 export function configure(aurelia) {
     aurelia.use
@@ -18,7 +19,10 @@ export function configure(aurelia) {
                                 'Authorization' : 'Basic ' + environment.untappdApiKey,
                             }});
             });
-        })
+        },
+        'aurelia-bootstrap-datetimepicker', config => {
+                  config.extra.bootstrapVersion = 4;
+          })
         .feature('resources');
 
     if (environment.debug) {

@@ -6,6 +6,7 @@ export function configure(config) {
         // Elements
        `${ELEMENTS}/navigation-bar/navigation-bar`,
        `${ELEMENTS}/age-verification/age-verification`,
+       `${ELEMENTS}/footer/footer`,
 
         // Value Converters
         `${VALUE_CONVERTERS}/full-name`,

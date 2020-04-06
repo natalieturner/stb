@@ -1,5 +1,5 @@
 import $ from 'jquery';
-
+import {inject} from 'aurelia-framework';
 export class Footer {
     attached() {
 

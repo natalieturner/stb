@@ -1,10 +1,9 @@
 import {inject} from 'aurelia-framework';
 import { SessionService } from 'services/session-service';
 import { Router } from 'aurelia-router';
-
 @inject(SessionService, Router)
-export class AgeVerification {
 
+export class AgeVerification {
     constructor(sessionService, router) {
         this.sessionService = sessionService;
         this.router = router;

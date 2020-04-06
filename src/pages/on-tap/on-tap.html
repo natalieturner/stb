@@ -1,14 +1,38 @@
 <template>
     <require from="./on-tap.css"></require>
-    <div id="onTap" class="container-fluid">
-        <div class="row" repeat.for="beer of beersOnTap">
-            <div class="col-sm-9">
-                <div click.delegate="clickToExpandCards(beer)" class="card-wrapper align=center ${beer.isExpanded ? 'expanded' : ''}">
-                    <div class="card-text-wrapper">
-                        <h6 class="card-title">${beer.name}</h6>
-                        <h7>${beer.style}</h7>
-                        <p class='card-text' if.bind="beer.isExpanded">${beer.description}</p>
+    <div class="container" style="background-color: gray">
+        <div class="row">
+            <div class="col-1-of-3">
+                <div id="onTap">
+                    <div class="accordion" id="beercordion" align="center">
+                        <div class="card" style="width: 30rem;" repeat.for="beer of beersOnTap">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0" align="center">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-${$index}" aria-expanded="false" aria-controls="collapse-${$index}">
+                                        <h6 class="card-title">${beer.name}</h6>
+                                        <h7>${beer.style}</h7>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapse-${$index}" class="collapse hide" aria-labelledby="headingOne" data-parent="#beercordion">
+                                <div class="card-body" align="center">
+                                    <p><img src="${beer.label_image}"></p>
+                                    <p>abv: ${beer.abv}</p>
+                                    <h7>${beer.description}</h7>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <p>
+                <img src="assets/STS32.png" />
+                </div>
+                <div class="row">
+                <p>
+                <img src="assets/STS-9.jpg" />
                 </div>
             </div>
         </div>

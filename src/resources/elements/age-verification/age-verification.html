@@ -1,12 +1,36 @@
 <template>
     <require from="./age-verification.css"></require>
-    <div id="verify" class="container-fluid">
-        <div class="content-area row">
-<!--            <div class="col-6">-->
-                <div class="content-image center" >
-                    <img src="assets/salty-dog-wood.jpg" click.delegate="markOldEnough()">
+    <header>
+        <div class="overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="assets/videos/babyTurtle.mov" type="video/mp4">
+            </video>
+            <div class="container h-200">
+                <div class="d-flex h-200 text-center align-items-center">
+                    <div id="age-verification">
+                        <div class="w-200 text-white align-center">
+                            <h1 class="display-3">Are you over 21?</h1>
+                            <br />
+                        </div>
+                        <div align="center">
+                            <div class="row">
+                                <div class='col-sm-3'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </p>
+                            <p class="lead mb-0"><button type="button" class="btn btn-dark" click.delegate="markOldEnough()">Yes</button></p>
+                        </div>
+                    </div>
                 </div>
-<!--            </div>-->
-        </div>
-    </div>
+            </div>
+    </header>
+
 </template>
+

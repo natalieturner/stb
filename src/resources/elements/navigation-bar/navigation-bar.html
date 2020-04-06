@@ -1,6 +1,7 @@
 <template>
     <require from="./navigation-bar.css"></require>
-    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+
+    <nav class="navbar navbar-expand-lg sticky-top" color-on-scroll="500" id="navbar">
         <a class="navbar-brand hidden-sm" href="home">
             <img src="/assets/logo.png" alt="logo" class="logo">
         </a>
@@ -12,10 +13,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" route-href="on-tap" data-target="#skeleton-navigation-navbar-collapse.in">ON TAP</a>
+                    <a class="nav-link" route-href="home" data-target="#skeleton-navigation-navbar-collapse.in">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" route-href="about" data-target="#skeleton-navigation-navbar-collapse.in">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" route-href="on-tap" data-target="#skeleton-navigation-navbar-collapse.in">ON TAP</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" route-href="events" data-target="#skeleton-navigation-navbar-collapse.in">EVENTS</a>

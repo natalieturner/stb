@@ -1,5 +1,6 @@
 import {inject} from 'aurelia-framework';
-import {Router} from 'aurelia-router'
+import {Router} from 'aurelia-router';
+import 'bootstrap';
 import {ScrollPageStep} from 'resources/pipelines/scroll-page-step';
 import {SessionService} from "./services/session-service";
 import {EventAggregator} from 'aurelia-event-aggregator';
