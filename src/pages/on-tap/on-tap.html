@@ -4,19 +4,19 @@
         <div class="row">
             <div class="col-1-of-3">
                 <div id="onTap">
-                    <div class="accordion" id="beercordion" align="center">
+                    <div class="accordion text-center" id="beercordion">
                         <div class="card" style="width: 30rem;" repeat.for="beer of beersOnTap">
                             <div class="card-header" id="headingOne">
-                                <h2 class="mb-0" align="center">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-${$index}" aria-expanded="false" aria-controls="collapse-${$index}">
+                                <h2 class="mb-0 text-center">
+                                    <button class="btn btn-link" type="button" click.delegate="toggleOpen(beer)">
                                         <h6 class="card-title">${beer.name}</h6>
                                         <h7>${beer.style}</h7>
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapse-${$index}" class="collapse hide" aria-labelledby="headingOne" data-parent="#beercordion">
-                                <div class="card-body" align="center">
-                                    <p><img src="${beer.label_image}"></p>
+                            <div id="beer-${beer.abv}" if.bind="beer.opened">
+                                <div class="card-body text-center">
+                                    <img src="${beer.label_image}" alt="${beer.abv}">
                                     <p>abv: ${beer.abv}</p>
                                     <h7>${beer.description}</h7>
                                 </div>

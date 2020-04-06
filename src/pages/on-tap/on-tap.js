@@ -30,9 +30,13 @@ export class OnTap {
         beer.isExpanded = !beer.isExpanded;
     };
 
-    toggleDiv(divId) {
-        $("#"+divId).toggle();
-        $('.toggle').not($("#"+divId)).hide();
+    toggleOpen(beer) {
+        for (let beer of this.beersOnTap) {
+            if (beer.opened) {
+                beer.opened = false;
+            }
+        }
+        beer.opened = true
     }
 
 //     var clickedElement = $obj;
