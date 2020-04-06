@@ -17,6 +17,7 @@ export class OnTap {
     }
 
     async attached() {
+        this.loading = true;
         this.menu = await this.menuService.getMenu();
         this.beerList = this.menu['menu'];
         this.menuSections = this.beerList['sections'];
@@ -24,6 +25,7 @@ export class OnTap {
         console.log('taplist - ', this.tapList);
         this.beersOnTap = this.tapList['items'];
         console.log(this.beersOnTap);
+        this.loading = false;
     }
 
     clickToExpandCards(beer){
@@ -36,7 +38,7 @@ export class OnTap {
                 beer.opened = false;
             }
         }
-        beer.opened = true
+        beer.opened = !beer.opened;
     }
 
 //     var clickedElement = $obj;
