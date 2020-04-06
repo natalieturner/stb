@@ -21,6 +21,7 @@
     "aurelia-webpack-plugin": "^4.0.0",
     "bluebird": "^3.5.1",
     "bootstrap": "^4.4.1",
+    "bootstrap-datepicker": "^1.9.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "eslint": "^4.19.1",
     "jquery": "^3.4.0",
@@ -31,6 +32,7 @@
     "react-dom": "^16.13.1",
     "requirejs": "^2.3.5",
     "text": "github:requirejs/text#latest",
+    "toastr": "^2.1.4",
     "webpack": "^4.42.1",
     "whatwg-fetch": "^2.0.4"
   },

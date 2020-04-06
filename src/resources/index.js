@@ -4,9 +4,10 @@ const VALUE_CONVERTERS = './value-converters';
 export function configure(config) {
     config.globalResources([
         // Elements
-       `${ELEMENTS}/navigation-bar/navigation-bar`,
-       `${ELEMENTS}/age-verification/age-verification`,
-       `${ELEMENTS}/footer/footer`,
+        `${ELEMENTS}/navigation-bar/navigation-bar`,
+        `${ELEMENTS}/age-verification/age-verification`,
+        `${ELEMENTS}/footer/footer`,
+        `${ELEMENTS}/date-picker/date-picker`,
 
         // Value Converters
         `${VALUE_CONVERTERS}/full-name`,
