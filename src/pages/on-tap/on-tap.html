@@ -1,41 +1,33 @@
 <template>
     <require from="./on-tap.css"></require>
     <div id="onTap">
-        <div class="container" style="background-color: gray">
-            <div class="row">
-                <div class="col-6">
-                    <div class="onTap">
-                        <div class="accordion text-center" id="beercordion">
-                            <div class="loading" if.bind="loading">
-                                <i class="fa fa-spinner fa-spin" style="font-size: 48px; color: white;"></i>
-                                <h5>Loading the goodies</h5>
-                            </div>
-                            <div class="card" style="width: 30rem;" repeat.for="beer of beersOnTap" if.bind="!loading">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0 text-center">
-                                        <button class="btn btn-link" type="button" click.delegate="toggleOpen(beer)">
-                                            <h6 class="card-title">${beer.name}</h6>
-                                            <h7>${beer.style}</h7>
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="beer-${beer.abv}" if.bind="beer.opened">
-                                    <div class="card-body text-center">>
-                                        <img src="${beer.label_image}" alt="${beer.abv}"
-                                        <p>abv: ${beer.abv}</p>
-                                        <h7>${beer.description}</h7>
-                                    </div>
-                                </div>
+        <div class="container-fluid">
+            <div class="col-lg-8"><p></p>
+            </div>
+            <div class="col-lg-6" id="right" style="padding-top: 430px;">
+                <div class="accordion text-center" id="beercordion">
+                    <div class="loading" if.bind="loading">
+                        <i class="fa fa-spinner fa-spin" style="font-size: 48px; color: white;"></i>
+                        <h5>Loading the goodies</h5>
+                    </div>
+                    <div class="card" style="width: 25rem; margin: 15px;" repeat.for="beer of beersOnTap" if.bind="!loading">
+                        <div class="card-header" id="headingOne" if.bind="!beer.opened">
+                            <h2 class="mb-0 text-center" >
+                                <button class="btn" type="button" click.delegate="toggleOpen(beer)">
+                                    <h5 class="card-title">${beer.name}<br>
+                                    ${beer.style}</h5>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="beer-${beer.abv}" if.bind="beer.opened">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${beer.name}</h5>
+                                <h5>${beer.style}</h5>
+                                <p>abv: ${beer.abv}</p>
+                                <p>${beer.description}</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div>
-                        <img src="assets/STS32.png" />
-                    </div>
-                    <div>
-                        <img src="assets/STS-9.jpg" />
                     </div>
                 </div>
             </div>

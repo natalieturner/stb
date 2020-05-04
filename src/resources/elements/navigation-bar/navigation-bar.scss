@@ -1,14 +1,22 @@
 nav {
-    height: 100px;
+    height: 120px;
 }
 
 .navbar {
     padding-top: 10px;
-   // padding-bottom: 10px;
+    padding-bottom: 10px !important;
     position: fixed;
-    color: orange !important;
-    background-image: url("assets/backgrounds/woodBanner.jpeg");
+    background-color: white !important;
+    //background-image: url("assets/backgrounds/wave2.png") ;
+    background-size: 200px 15px;
+    background-repeat: repeat-x;
+    background-position: 100% 20%;
     transition: top 0.3s;
+    margin-bottom: 0px;
+
+    .bg-lite {
+        background-color: white !important;
+    }
 
     .navbar-brand-container {
         height: 100%;
@@ -19,7 +27,7 @@ nav {
             }
 
             cursor: pointer;
-            margin-left: 10px;
+            margin-left: 40px;
             margin-top: -10px;
         }
     }
@@ -31,10 +39,10 @@ nav {
 
     .navbar-nav .nav-link:not(.btn) {
         text-transform: uppercase;
-        font-size: 1.2142em;
-        padding: 0.5rem 0.7rem;
+        font-size: 1.3142em;
+        padding: 1.8rem 1.9rem;
         line-height: 1.625rem;
-        color: black;
+        color: #15254A;
     }
 
     #navbar a {
@@ -47,13 +55,14 @@ nav {
     }
 
     #navbar a:hover {
-      background-color: #ddd;
+      background-color: #white;
       color: black;
     }
 
     .bg {
+        background-color: white !important;
         min-height: 70vh;
-        background-image: url('assets/salty-dog-wood.jpg');
+        //background-image: url('assets/salty-dog-wood.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -66,7 +75,7 @@ nav {
     .stuck .sticky-top {
         background-color: orange !important;
         padding-top: 3px !important;
-        padding-bottom: 3px !important;
+        padding-bottom: 0px !important;
     }
 
 }

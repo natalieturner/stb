@@ -1,86 +1,32 @@
 #home {
     padding-top: 20px;
-    color: white;
+    color: black;
+    background-image: url("assets/backgrounds/backgroundPour.png");
+    background-size:100% 100%;
+    height:1030px;
+    background-repeat: no-repeat;
 
-    .content-area {
-        margin-bottom: 100px;
-        .heading {
-            font-size: 18px;
-            font-weight: bold;
-            font-color: white;
-            letter-spacing: 1px;
-            border-bottom: 20px solid whitesmoke;
-            margin-bottom: 20px solid whitesmoke;
-        }
-
-        .body {
-            font-color: white;
-        }
-
-        .content-image {
-            img {
-                width: 80%;
-                height: 80%;
-                max-width: 100%;
-                max-height: 100%;
-                opacity: 0.6;
-                filter: alpha(opacity=50); /* For IE8 and earlier */
-            }
-        }
+    .ArticleCopy{
+      font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+      width: 50%;
+      margin:55px left;
+      vertical-align: middle;
+      padding: 3rem;
     }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      font-color: white;
+    .ArticleCopy p {
+        text-rendering: optimizeLegibility;
     }
-
-    .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0, 0.9);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-
-    .overlay-content {
-      position: relative;
-      top: 25%;
-      width: 100%;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .overlay a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 36px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .overlay a:hover, .overlay a:focus {
-      color: #f1f1f1;
-    }
-
-    .overlay .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
-    }
-
-    @media screen and (max-height: 450px) {
-      .overlay a {font-size: 20px}
-      .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-      }
+    .ArticleCopy blockquote {
+        border-radius: 3px;
+        position: relative;  /*  <--- */
+        vertical-align: center;
+        text-align: center;
+        padding: 1rem 1.2rem;
+        width: 80%;  /* create space for the quotes */
+        color: #4a4a4a;
+        margin: 45rem auto 2rem;
+        color: #4a4a4a;
+        background: #E8E8E8;
+        opacity: 50%;
     }
 }

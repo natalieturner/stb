@@ -5,22 +5,18 @@
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="assets/videos/babyTurtle.mov" type="video/mp4">
         </video>
-        <div class="container h-200">
+        <div class="container h-200 w-100">
             <div class="d-flex h-200 text-center align-items-center">
                 <div id="age-verification">
-                    <div class="w-200 text-white align-center">
-                        <h1 class="display-3">Are you over 21?</h1>
+                    <div class="w-100 text-white align-center">
+                        <h2 class="display-3">Are you over 21?</h2>
                     </div>
-                    <form autocomplete="off" submit.delegate="markOldEnough()">
-                        <div class="row">
-                            <div class='col-sm-3'>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="dob" placeholder="Date Of Birth"
-                                           date-picker="start-view.bind: 'decades'; defaultDate.bind: defaultDate; date.two-way: dateOfBirth"
-                                           value.two-way="profile.dateOfBirth">
-                                </div>
+                    <form autocomplete="off" submit.delegate="markOldEnough()" class="form-inline justify-content-center">
+                        <div class="form-group text-align:center">
+                            <input type="text" class="form-control text-center align-center" id="dob" placeholder="Date Of Birth"
+                                   date-picker="start-view.bind: 'years'; defaultDate.bind: defaultDate; date.two-way: dateOfBirth"
+                                   value.two-way="profile.dateOfBirth">
                             </div>
-                        </div>
                         <button type="submit" class="btn btn-dark">Enter</button>
                     </form>
                 </div>

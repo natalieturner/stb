@@ -31,7 +31,6 @@ export class AgeVerification {
     }
 
     verifyAge() {
-        //if dob verify age
         this.markOldEnough();
     }
 
@@ -42,6 +41,6 @@ export class AgeVerification {
         }
 
         this.sessionService.saveOldEnough(true);
-        this.router.navigate('on-tap');
+        this.router.navigate('home');
     }
 }

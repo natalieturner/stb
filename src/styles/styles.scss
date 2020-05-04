@@ -10,7 +10,7 @@ body {
 
 .bg {
     min-height: 70vh;
-    background-image: url('assets/salty-dog-wood.jpg');
+    //background-image: url('assets/salty-dog-wood.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -62,9 +62,9 @@ body {
 
 #footer {
     background-color: white;
-    background: url("assets/backgrounds/woodbanner.jpeg") center center;
-    color: white!important;
-    padding: 20px;
+    //background: url("assets/backgrounds/woodbanner.jpeg") center center;
+    color: black!important;
+    padding: 10px;
     text-align: center;
     .image {
         margin-bottom: 10px;
